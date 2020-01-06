@@ -2,15 +2,21 @@
 title: &siteTitleEn Bunker project
 timezone: Europe/Kiev
 url: https://bunker.org.ua
-baseurl: ''
+baseurl: ""
 lang: en
 direction: ltr
 
 defaults:
-  - scope: { path: '' }
+  - scope:
+      path: ""
     values:
       lang: en
       layout: default
+  - scope:
+      type: posts
+      path: ""
+    values:
+      layout: post
 
 exclude: [Makefile]
 

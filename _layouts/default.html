@@ -30,6 +30,7 @@
 %}{%  endif %}
     <meta property="og:title" content="{{ page.title | escape }}">
     <meta property="og:url" content="{{ site.url }}{{ page.url | remove: 'index.html' | absolute_url }}">
+    <link rel="shortcut icon" href="{{ _root_prefix }}favicon.ico">
   </head>
   <body class="flex-container">
     <header class="flex-row">
@@ -70,7 +71,7 @@
           </ul>
         </nav>{%
         endif %}
-        {{ site.i18n_footer[page.lang] | '' | markdownify }}
+        {{ site.i18n_footer[page.lang] | markdownify }}
       </div>
     </footer>
   </body>
