@@ -11,10 +11,6 @@ defaults:
     values:
       lang: en
       layout: default
-  - scope: { path: uk }
-    values: { lang: uk }
-  - scope: { path: ru }
-    values: { lang: ru }
 
 exclude: [Makefile]
 
