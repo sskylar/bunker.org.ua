@@ -1,5 +1,5 @@
 ---
-title: &siteTitle Bunker project
+title: &siteTitleEn Bunker project
 timezone: Europe/Kiev
 url: https://bunker.org.ua
 baseurl: ''
@@ -19,7 +19,7 @@ defaults:
 exclude: [Makefile]
 
 i18n_title:
-  en: *siteTitle
+  en: *siteTitleEn
   uk: Проект «Бункер»
   ru: Проект «Бункер»
 
