@@ -1,0 +1,78 @@
+{%    assign _root_prefix = ''
+%}{%  assign _root_subfolders = page.url | split: '/' | size | minus: 2
+%}{%  for x in (1.._root_subfolders)
+%}{%    assign _root_prefix = _root_prefix | append: '../'
+%}{%  endfor
+%}<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}" dir="{{ page.direction | default: site.direction | default: 'ltr' }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title | escape }} | {{ site.i18n_title[page.lang] | default: site.title | escape }}</title>
+    <link rel="stylesheet" href="{{ _root_prefix }}css/main.css">
+    <link rel="canonical" href="{{ site.url }}{{ page.url | remove: 'index.html' | absolute_url }}">{%
+        if page.ref
+%}{%    assign _list = site.posts | where: 'ref', page.ref | sort: 'lang'
+%}{%    for _item in _list
+%}{%      if _item.url != page.url
+%}{%        assign _item_url = _item.url | slice: 1, _item.url.size %}
+    <link rel="alternate" hreflang="{{ _item.lang }}" href="{{ _root_prefix }}{{ _item_url }}">{%
+          endif
+%}{%    endfor
+%}{%    assign _list = site.pages | where: 'ref', page.ref | sort: 'lang'
+%}{%    for _item in _list
+%}{%      if _item.url != page.url
+%}{%        assign _item_url = _item.url | slice: 1, _item.url.size %}
+    <link rel="alternate" hreflang="{{ _item.lang }}" href="{{ _root_prefix }}{{ _item_url }}">{%
+          endif
+%}{%    endfor
+%}{%  endif %}
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="{{ page.title | escape }}">
+    <meta property="og:site_name" content="{{ site.i18n_title[page.lang] | default: site.title | escape }}">
+    <meta property="og:url" content="{{ site.url }}{{ page.url | remove: 'index.html' | absolute_url }}">
+  </head>
+  <body class="flex-container">
+    <header class="flex-row">
+      <div class="inner">
+        <h1>{{ page.title | escape }}</h1>
+      </div>
+    </header>
+    <article class="flex-row flex-main">
+      <div class="inner">
+
+{{ content }}
+
+      </div>
+    </article>
+    <footer class="flex-row">
+      <div class="inner">{%
+      if page.ref %}
+        <nav>
+          <ul>{%
+        assign _list = site.posts | where: 'ref', page.ref | sort: 'lang'
+%}{%    for _item in _list
+%}{%      if _item.url != page.url
+%}{%        assign _item_url = _item.url | slice: 1, _item.url.size %}
+              <li lang="{{ _item.lang }}">
+                <a href="{{ _root_prefix }}{{ _item_url }}">{{ site.i18n_lang_names[_item.lang] }}</a>
+              </li>{%
+          endif
+%}{%    endfor
+%}{%    assign _list = site.pages | where: 'ref', page.ref | sort: 'lang'
+%}{%    for _item in _list
+%}{%      if _item.url != page.url
+%}{%        assign _item_url = _item.url | slice: 1, _item.url.size %}
+              <li lang="{{ _item.lang }}">
+                <a href="{{ _root_prefix }}{{ _item_url }}">{{ site.i18n_lang_names[_item.lang] }}</a>
+              </li>{%
+          endif
+%}{%    endfor %}
+          </ul>
+        </nav>{%
+        endif %}
+        {{ site.i18n_footer[page.lang] | '' | markdownify }}
+      </div>
+    </footer>
+  </body>
+</html>

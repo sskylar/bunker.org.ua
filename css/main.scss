@@ -1,0 +1,54 @@
+---
+layout: null
+sitemap: false
+---
+$content-width:     48rem;
+$gutter:            1.2rem;
+
+html, body, .inner > *:first-child, footer p {
+  margin: 0;
+  padding: 0;
+}
+
+html { height: 100% }
+body { min-height: 100% }
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  .flex-row {
+    box-sizing: border-box;
+    width: 100%;
+    padding: $gutter;
+    .inner {
+      max-width: $content-width;
+      margin: 0 auto;
+    }
+    & + & { margin-top: $gutter * 2 }
+    &.flex-main { flex: 1 0 auto }
+  }
+}
+
+header { border-bottom: medium dashed }
+footer { border-top: thin dashed }
+
+nav {
+  float: right;
+  ul, li {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    a { color: inherit }
+  }
+  li + li { margin: 0 0 0 $gutter }
+}
+
+html[dir=rtl] nav {
+  float: left;
+  li + li { margin: 0 $gutter 0 0 }
+}
+
+@media print {
+  nav { display: none }
+  a[href^="http"]::after { content: " (" attr(href) ")" }
+}
