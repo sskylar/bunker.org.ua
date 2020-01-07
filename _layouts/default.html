@@ -27,9 +27,12 @@
     <link rel="alternate" hreflang="{{ _item.lang }}" href="{{ _root_prefix }}{{ _item_url }}">{%
           endif
 %}{%    endfor
-%}{%  endif %}
-    <meta property="og:title" content="{{ page.title | escape }}">
+%}{%  endif %}{%
+      for _item in page.head_extras | default: [] %}
+    {{  _item
+}}{%  endfor %}
     <meta property="og:url" content="{{ site.url }}{{ page.url | remove: 'index.html' | absolute_url }}">
+    <meta property="og:title" content="{{ page.title | escape }}">
     <link rel="shortcut icon" href="{{ _root_prefix }}favicon.ico">
   </head>
   <body class="flex-container">
@@ -42,7 +45,6 @@
       <div class="inner">
 
 {{ content }}
-
       </div>
     </article>
     <footer class="flex-row">

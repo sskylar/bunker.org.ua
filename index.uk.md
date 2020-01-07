@@ -3,6 +3,8 @@ title: Проект «Бункер»
 lang: uk
 ref: index
 date: 2020-01-06 14:45:00 +02:00
+head_extras:
+ - <link rel="alternate" type="application/rss+xml" href="feed.uk.xml">
 ---
 Проект «Бункер» — це невеликий приватний сервіс для веб-хостингу,
 DNS та електронної пошти.
