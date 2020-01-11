@@ -20,6 +20,9 @@ defaults:
 
 exclude: [Makefile]
 
+# sass:
+#     style: compressed
+
 i18n_title:
   en: *siteTitleEn
   uk: Проект «Бункер»
