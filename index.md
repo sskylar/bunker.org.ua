@@ -19,5 +19,6 @@ Contacts
 
 <p itemscope itemtype="http://schema.org/Person">
   <span itemprop="name">Dmytro K.</span>
-  <a href="mailto:gray@bunker.org.ua" itemprop="email">gray@bunker.org.ua</a>
+  &lt;<a href="mailto:%22Dmytro K.%22%20%3cgray@bunker.org.ua%3e"
+    class="mail" itemprop="email">gray@bunker.org.ua</a>&gt;
 </p>
