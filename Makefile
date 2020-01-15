@@ -1,6 +1,5 @@
-
 build:
 	jekyll build
-	#gzip -rk9 _site
+	gzip -rk9 _site
 
 .PHONY: build

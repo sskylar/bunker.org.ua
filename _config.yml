@@ -1,5 +1,7 @@
 ---
-title: &siteTitleEn Bunker project
+title: &siteTitleEn The Bunker project
+description: &siteDescEn Private service for web hosting, DNS, and email
+
 timezone: Europe/Kiev
 url: https://bunker.org.ua
 baseurl: ""
@@ -27,6 +29,11 @@ i18n_title:
   en: *siteTitleEn
   uk: Проект «Бункер»
   ru: Проект «Бункер»
+
+i18n_description:
+  en: *siteDescEn
+  uk: Приватний сервіс для веб-хостингу, DNS та електронної пошти
+  ru: Частный сервис для веб-хостинга, DNS и электронной почты
 
 i18n_lang_names:
   en: English
