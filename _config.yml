@@ -20,7 +20,7 @@ defaults:
     values:
       layout: post
 
-exclude: [Makefile]
+exclude: [Makefile, README.md, bunker.org.ua.tar.gz]
 
 # sass:
 #     style: compressed
