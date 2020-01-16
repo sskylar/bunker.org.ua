@@ -1,0 +1,12 @@
+---
+title: Публичный репозиторий GitHub 
+lang: ru
+date: 2020-01-16 03:00:00 +0200
+ref: 2020-01-16-public-github-repository
+---
+Следуя идеям открытости и прозрачности,
+было принято решение публиковать исходные коды этого сайта.
+
+Репозиторий GitHub: [github.com/kastaneda/bunker.org.ua][1].
+
+[1]: https://github.com/kastaneda/bunker.org.ua
