@@ -9,6 +9,8 @@ head_extras:
 The Bunker project is a small private service for web hosting,
 DNS, and email.
 
+The Bunker is working since 2008.
+
 Announcements
 -------------
 
