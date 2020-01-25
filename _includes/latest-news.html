@@ -2,7 +2,7 @@
       assign _list = site.posts | where: 'lang', page.lang
 %}{%  for _item in _list %}
   <li>
-    <span>{{ _item.date | date: '%Y-%m-%d %H:%M' }}</span>.
+    <span>{{ _item.date | date: '%Y-%m-%d' }}</span>.
     <a href="{{ _root_prefix }}{{ _item.url }}">{{ _item.title }}</a>
   </li>{%
       endfor %}
