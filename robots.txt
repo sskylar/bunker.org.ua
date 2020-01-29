@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+Host: bunker.org.ua
+Sitemap: https://bunker.org.ua/sitemap.xml
