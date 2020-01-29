@@ -47,6 +47,10 @@ nav a, a.mail
   a[href^="http"]::after
     content: " (" attr(href) ")"
 
+@media (max-width: $content-width)
+  .xtra
+    display: none
+
 // Damn, should I really define colors?
 
 @media (prefers-color-scheme: dark)
