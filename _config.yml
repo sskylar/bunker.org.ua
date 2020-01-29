@@ -9,14 +9,11 @@ lang: en
 direction: ltr
 
 defaults:
-  - scope:
-      path: ""
-    values:
+  - values:
       lang: en
       layout: default
   - scope:
       type: posts
-      path: ""
     values:
       layout: post
 
