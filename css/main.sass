@@ -38,7 +38,7 @@ nav
     content: '• '
 
 nav a, a.mail
-  color: inherit
+  color: inherit !important
 
 @media print
   nav
@@ -46,3 +46,16 @@ nav a, a.mail
 
   a[href^="http"]::after
     content: " (" attr(href) ")"
+
+// Damn, should I really define colors?
+
+@media (prefers-color-scheme: dark)
+  html
+    background: #333
+    color: #aaa
+
+  a
+    color: #58c
+
+    &:visited
+      color: #a6c
