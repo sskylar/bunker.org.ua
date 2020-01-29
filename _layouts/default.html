@@ -12,7 +12,10 @@
         site.i18n_title[page.lang] | default: site.title | escape }}{% endif %}</title>
     <meta name="description" content="{{ site.i18n_description[page.lang] | escape }}">
     <link rel="canonical" href="{{ site.url }}{{ page.url | remove: 'index.html' }}">
-    <link rel="stylesheet" href="{{ _root_prefix }}css/main.css">{%
+    <style>
+{{ '@import "main"' | sassify }}
+    </style>
+    <!-- link rel="stylesheet" href="{{ _root_prefix }}css/main.css" -->{%
         if page.ref
 %}{%    assign _list = site.posts | where: 'ref', page.ref | sort: 'lang'
 %}{%    for _item in _list
