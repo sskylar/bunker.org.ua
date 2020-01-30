@@ -9,7 +9,9 @@ lang: en
 direction: ltr
 
 defaults:
-  - values:
+  - scope:
+      path: ""
+    values:
       lang: en
       layout: default
   - scope:
