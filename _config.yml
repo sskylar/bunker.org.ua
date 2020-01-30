@@ -1,48 +1,46 @@
 ---
-title: &siteTitleEn The Bunker project
-description: &siteDescEn Private service for web hosting, DNS, and email
-
+title: The Bunker project
 timezone: Europe/Kiev
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+defaults:
+- scope:
+    path: ''
+  values:
+    lang: en
+    layout: default
+- scope:
+    path: ''
+    type: posts
+  values:
+    layout: post
+description: Private service for web hosting, DNS, and email
 url: https://bunker.org.ua
-baseurl: ""
+baseurl: ''
 lang: en
 direction: ltr
-
-defaults:
-  - scope:
-      path: ""
-    values:
-      lang: en
-      layout: default
-  - scope:
-      type: posts
-    values:
-      layout: post
-
 exclude:
-  - Makefile
-  - README.md
-  - bunker.org.ua.tar.gz
-
-# sass:
-#     style: compressed
-
+- Makefile
+- README.md
+- bunker.org.ua.tar.gz
 i18n_title:
-  en: *siteTitleEn
+  en: The Bunker project
   uk: Проект «Бункер»
   ru: Проект «Бункер»
-
 i18n_description:
-  en: *siteDescEn
+  en: Private service for web hosting, DNS, and email
   uk: Приватний сервіс для веб-хостингу, DNS та електронної пошти
   ru: Частный сервис для веб-хостинга, DNS и электронной почты
-
 i18n_lang_names:
   en: English
   uk: Українська
   ru: Русский
-
 i18n_footer:
-  en: © Dmytro K.
-  uk: © Дмитро К.
-  ru: © Дмитрий К.
+  en: "© Dmytro K."
+  uk: "© Дмитро К."
+  ru: "© Дмитрий К."

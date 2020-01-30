@@ -1,5 +1,6 @@
 ---
-layout: null
+layout: 
 lang: uk
 ---
+
 {% include rss-feed.xml %}

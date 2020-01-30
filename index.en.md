@@ -1,12 +1,13 @@
 ---
 title: The Bunker project
+date: 2020-01-06 14:45:00 +02:00
 lang: en
 ref: index
-date: 2020-01-06 14:45:00 +02:00
-mtime: 2020-01-30 01:08:30 +0200
+mtime: 2020-01-30 01:08:30 +02:00
 head_extras:
- - <link rel="alternate" type="application/rss+xml" href="feed.en.xml">
+- <link rel="alternate" type="application/rss+xml" href="feed.en.xml">
 ---
+
 The Bunker project is a small private service for web hosting,
 DNS, and email.
 
